@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace IntelGUA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

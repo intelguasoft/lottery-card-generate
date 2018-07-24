@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace IntelGUA\Http\Controllers;
 
 use Illuminate\Http\Request;
 
