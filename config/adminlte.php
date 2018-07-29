@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Lottery Card</b> Generate',
+    'logo' => '<b>Lottery Card Generate</b>',
 
-    'logo_mini' => '<b>L</b>CG',
+    'logo_mini' => '<b>LCG</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,79 +108,49 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'Boletas',
         [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text'        => 'Generar',
+            'url'         => 'admin/generate',
+            'icon'        => 'ticket',
+            'icon_color' => 'green',
+        ],
+        'Movimientos',
+        [
+            'text' => 'Ganadores',
+            'url'  => 'admin/winners',
+            'icon' => 'trophy',
+            'icon_color' => 'green',
         ],
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
+            'text' => 'Ventas',
+            'url'  => 'admin/sales',
+            'icon' => 'money',
+            'icon_color' => 'green',
         ],
         [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
+            'text'    => 'Devoluciones',
+            'url' => 'admin/devol',
+            'icon'    => 'reply-all',
+            'icon_color' => 'green',
         ],
+        'Configuraciones',
         [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        'LABELS',
-        [
-            'text'       => 'Important',
+            'text'       => 'Configurar app.',
+            'url' => 'admin/devol',
+            'icon' => 'cogs',
             'icon_color' => 'red',
         ],
         [
-            'text'       => 'Warning',
+            'text'       => 'Configurar boleta',
+            'url' => 'admin/devol',
+            'icon' => 'bars',
             'icon_color' => 'yellow',
         ],
         [
-            'text'       => 'Information',
+            'text'       => 'Ayuda',
+            'url' => 'admin/devol',
+            'icon' => 'question-circle',
             'icon_color' => 'aqua',
         ],
     ],
