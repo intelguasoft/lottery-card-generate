@@ -13,10 +13,10 @@ class CardsController extends Controller
 
         // set document information
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Nicola Asuni');
-        $pdf->SetTitle('TCPDF Example 005');
-        $pdf->SetSubject('TCPDF Tutorial');
-        $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+        $pdf->SetAuthor('Lottery Card Generate');
+        $pdf->SetTitle('Lista de boletas para la lotería');
+        $pdf->SetSubject('Boletas para la lotería');
+        $pdf->SetKeywords('Lotería, Lotto, Lottery, Win, Winner');
 
         // set default header data
         $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 005', PDF_HEADER_STRING);
