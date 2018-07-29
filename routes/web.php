@@ -12,7 +12,7 @@ use IntelGUA\Library\Generate;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->guest('/login');
 });
 
 Auth::routes();

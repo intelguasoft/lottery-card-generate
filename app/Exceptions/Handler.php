@@ -3,6 +3,8 @@
 namespace IntelGUA\Exceptions;
 
 use Exception;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -48,4 +50,5 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
 }

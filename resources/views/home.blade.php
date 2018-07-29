@@ -1,11 +1,11 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'Lottery Card Generate')
 
 @section('content_header')
     <h1>Dashboard</h1>
 @stop
 
 @section('content')
-    <p>You are logged in!</p>
+    <p>Bienvenido, estas logueado!</p>
 @stop
