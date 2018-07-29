@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => IntelGUA\User::class,
+            'model' => IntelGUA\Models\User::class,
         ],
 
         // 'users' => [

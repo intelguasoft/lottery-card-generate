@@ -1,5 +1,5 @@
 <?php
-
+use IntelGUA\Library\Generate;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('generar', function(){
+    $gen = new Generate();
+    $data = $gen->getNumbersGenerated(8000, true, 5);
+    for ($i=0; $i < count($data); $i++) {
+        echo $data[$i]  . "<br />";
+    }
+
+});
