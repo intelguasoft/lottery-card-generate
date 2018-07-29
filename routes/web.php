@@ -28,3 +28,5 @@ Route::get('generar', function(){
     }
 
 });
+
+Route::get("cards", "CardsController@generate");
