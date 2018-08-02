@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Clase para la generación de números aleatorios de manera
  * personalizada por medio de argumentos.
@@ -32,11 +33,11 @@ class Generate
     {
         $this->listNumbers[] = $this->generateNumber($length);
 
-        while (count($this->listNumbers) <= $quantity) {
+        while (count($this->listNumbers) <= ($quantity - 1)) {
             $this->currentNumber = $this->generateNumber($length);
             if (in_array((string)$this->currentNumber, $this->listNumbers)) {
                 continue;
-            }else {
+            } else {
                 $this->listNumbers[] = $this->currentNumber;
             }
 
@@ -54,19 +55,25 @@ class Generate
      * @param int $length
      * @return string
      */
-    public function generateNumber($length = 5){
+    public function generateNumber($length = 5)
+    {
 
-        $chars = '1234567890'; /** Caracteres permitidos para formar la cantidad */
-        $chars_length = (strlen($chars) - 1); /** Designamos el largo de la cadena */
-        $string = $chars{rand(0, $chars_length)};
+        $chars = '1234567890';
+        /** Caracteres permitidos para formar la cantidad */
+        $chars_length = (strlen($chars) - 1);
+        /** Designamos el largo de la cadena */
+        $string = $chars {
+            rand(0, $chars_length)};
 
-        for ($i = 1; $i < $length; $i = strlen($string))
-        {
-            $r = $chars{rand(0, $chars_length)};
-            if ($r != $string{$i - 1}) $string .= $r;
+        for ($i = 1; $i < $length; $i = strlen($string)) {
+            $r = $chars {
+                rand(0, $chars_length)};
+            if ($r != $string {
+                $i - 1}) $string .= $r;
         }
 
-        return $string; /** Devolvemos la cantidad formada como cadena */
+        return $string;
+        /** Devolvemos la cantidad formada como cadena */
     }
 
 }

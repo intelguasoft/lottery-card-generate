@@ -9,7 +9,7 @@ use IntelGUA\Library\Generate;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return redirect()->guest('/login');
@@ -17,16 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('admin');
 
-
-Route::get('generar', function(){
-    $gen = new Generate();
-    $data = $gen->getNumbersGenerated(8000, true, 5);
-    for ($i=0; $i < count($data); $i++) {
-        echo $data[$i]  . "<br />";
-    }
-
-});
-
-Route::get("cards", "CardsController@generate");
+Route::get("admin/ballots", "CardsController@getBallots")->middleware('auth');

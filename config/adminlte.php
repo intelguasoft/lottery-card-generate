@@ -11,7 +11,7 @@ return [
     | of your page. You can override it per page with the title section.
     | You can optionally also specify a title prefix and/or postfix.
     |
-    */
+ */
 
     'title' => 'Lottery Card Generate',
 
@@ -28,7 +28,7 @@ return [
     | You can use basic HTML here if you want. The logo has also a mini
     | variant, used for the mini side bar. Make it 3 letters or so
     |
-    */
+     */
 
     'logo' => '<b>Lottery Card Generate</b>',
 
@@ -43,7 +43,7 @@ return [
     | blue, black, purple, yellow, red, and green. Each skin also has a
     | ligth variant: blue-light, purple-light, purple-light, etc.
     |
-    */
+     */
 
     'skin' => 'red-light',
 
@@ -56,7 +56,7 @@ return [
     | null, 'boxed', 'fixed', 'top-nav'. null is the default, top-nav
     | removes the sidebar and places your menu in the top navbar
     |
-    */
+     */
 
     'layout' => null,
 
@@ -69,7 +69,7 @@ return [
     | bar. To adjust your sidebar layout simply set this  either true
     | this is compatible with layouts except top-nav layout option
     |
-    */
+     */
 
     'collapse_sidebar' => false,
 
@@ -83,7 +83,7 @@ return [
     | You can set the request to a GET or POST with logout_method.
     | Set register_url to null if you don't want a register link.
     |
-    */
+     */
 
     'dashboard_url' => 'home',
 
@@ -105,50 +105,50 @@ return [
     | Font Awesome. A string instead of an array represents a header in sidebar
     | layout. The 'can' is a filter on Laravel's built in Gate functionality.
     |
-    */
+     */
 
     'menu' => [
         'Boletas',
         [
-            'text'        => 'Generar',
-            'url'         => 'admin/generate',
-            'icon'        => 'ticket',
+            'text' => 'Generar',
+            'url' => 'admin/ballots',
+            'icon' => 'ticket',
             'icon_color' => 'green',
         ],
         'Movimientos',
         [
             'text' => 'Ganadores',
-            'url'  => 'admin/winners',
+            'url' => 'admin/winners',
             'icon' => 'trophy',
             'icon_color' => 'green',
         ],
         [
             'text' => 'Ventas',
-            'url'  => 'admin/sales',
+            'url' => 'admin/sales',
             'icon' => 'money',
             'icon_color' => 'green',
         ],
         [
-            'text'    => 'Devoluciones',
+            'text' => 'Devoluciones',
             'url' => 'admin/devol',
-            'icon'    => 'reply-all',
+            'icon' => 'reply-all',
             'icon_color' => 'green',
         ],
         'Configuraciones',
         [
-            'text'       => 'Configurar app.',
+            'text' => 'Configurar app.',
             'url' => 'admin/devol',
             'icon' => 'cogs',
             'icon_color' => 'red',
         ],
         [
-            'text'       => 'Configurar boleta',
+            'text' => 'Configurar boleta',
             'url' => 'admin/devol',
             'icon' => 'bars',
             'icon_color' => 'yellow',
         ],
         [
-            'text'       => 'Ayuda',
+            'text' => 'Ayuda',
             'url' => 'admin/devol',
             'icon' => 'question-circle',
             'icon_color' => 'aqua',
@@ -165,7 +165,7 @@ return [
     | You can comment out the GateFilter if you don't want to use Laravel's
     | built in Gate functionality
     |
-    */
+     */
 
     'filters' => [
         JeroenNoten\LaravelAdminLte\Menu\Filters\HrefFilter::class,
@@ -184,11 +184,11 @@ return [
     | only DataTables is supported as a plugin. Set the value to true
     | to include the JavaScript file from a CDN via a script tag.
     |
-    */
+     */
 
     'plugins' => [
         'datatables' => true,
-        'select2'    => true,
-        'chartjs'    => true,
+        'select2' => true,
+        'chartjs' => true,
     ],
 ];
