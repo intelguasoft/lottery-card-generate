@@ -20,7 +20,7 @@
 
                 <div class="form-group has-feedback {{ $errors->has('first_name') ? 'has-error' : '' }}">
                     <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}"
-                           placeholder="{{ trans('adminlte::adminlte.full_name') }}">
+                           placeholder="Nombre">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('first_name'))
                         <span class="help-block">
@@ -30,7 +30,7 @@
                 </div>
                  <div class="form-group has-feedback {{ $errors->has('last_name') ? 'has-error' : '' }}">
                     <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}"
-                           placeholder="{{ trans('adminlte::adminlte.full_name') }}">
+                           placeholder="Apellidos">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('last_name'))
                         <span class="help-block">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group has-feedback {{ $errors->has('phone') ? 'has-error' : '' }}">
                     <input type="text" name="phone" class="form-control" value="{{ old('phone') }}"
-                           placeholder="{{ trans('adminlte::adminlte.full_name') }}">
+                           placeholder="Telefono">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('phone'))
                         <span class="help-block">
@@ -80,7 +80,7 @@
                 </div>
                 <div class="form-group has-feedback {{ $errors->has('address') ? 'has-error' : '' }}">
                     <input type="text" name="address" class="form-control" value="{{ old('address') }}"
-                           placeholder="{{ trans('adminlte::adminlte.full_name') }}">
+                           placeholder="Direccion">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('address'))
                         <span class="help-block">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="form-group has-feedback {{ $errors->has('avatar') ? 'has-error' : '' }}">
                     <input type="text" name="avatar" class="form-control" value="{{ old('avatar') }}"
-                           placeholder="{{ trans('adminlte::adminlte.full_name') }}">
+                           placeholder="Avatar">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('avatar'))
                         <span class="help-block">
