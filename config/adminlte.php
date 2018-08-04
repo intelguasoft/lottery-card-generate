@@ -110,7 +110,7 @@ return [
     'menu' => [
         'Boletas',
         [
-            'text' => 'Generar',
+            'text' => 'Cuadernillos de boletas',
             'url' => 'admin/ballots',
             'icon' => 'ticket',
             'icon_color' => 'green',

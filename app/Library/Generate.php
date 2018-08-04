@@ -72,7 +72,11 @@ class Generate
                 break;
         }
 
-        $this->listNumbers[] = $this->generateNumber($this->length);
+        return $this->listNumbers;
+    }
+
+    public function generateNumbers()
+    {
 
         while (count($this->listNumbers) <= ($this->quantity - 1)) {
             $this->currentNumber = $this->generateNumber($this->length);
@@ -86,8 +90,8 @@ class Generate
                 $this->listNumbers[] = $this->currentNumber;
             }
         }
-        return $this->listNumbers;
 
+        dd($this->listNumbers);
     }
 
     /**
