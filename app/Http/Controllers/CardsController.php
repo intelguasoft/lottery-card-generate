@@ -31,26 +31,16 @@ class CardsController extends Controller
 
     public function rectangulos()
     {
-
-        $ancho = 60;
-        $alto = 30;
-        $posX = 5;
-        $posY = 8;
-
         $pdf = new Rectangle();
         $pdf->AddPage();
         $pdf->SetLineWidth(0.3);
         $pdf->SetDrawColor(155, 15, 15);
         $pdf->SetFillColor(253, 177, 177);
-        for ($i = 1; $i <= 100; $i++) {
+
+        for ($i = 1; $i <= 3; $i++) {
             for ($j = 1; $j <= 3; $j++) {
-                $pdf->RoundedRect($posY, $posX, $ancho, $alto, 1.5, 'DF');
-                $posY = $ancho + 5;
+                $pdf->RoundedRect(5, (8 + 60), 60, 30, 1.5, 'DF');
             }
-            $posX = $alto + 5;
-            //$pdf->Text(20, ($i * 1.7) * 20, 'string txt');
-
-
         }
         $pdf->Output();
 
