@@ -12,14 +12,17 @@ class Boleta extends Fpdf
     {
         $this->Rect((5 + $espejo), 5 + $nivel, 65, 40); //Marco exterior
         $this->Rect((37 + $espejo), 12 + $nivel, 25, 25); //Marco logo
+        //$this->Image($ticket->logo, (37 + $espejo), 12 + $nivel, 25, 25, 'PNG');
+        //$this->Image('../../public/img/logo_round_2.jpg', (37 + $espejo), (12 + $nivel), 50, 45);
 
         //Numero de boleta y su recuadro
         $this->setXY((6 + $espejo), 7 + $nivel);
         $this->Cell(5, 5, 'No.', 0, 0, 'L');
 
         $this->setXY((10 + $espejo), 7 + $nivel);
-        // $this->SetTextColor(20, 40, 210);
+        $this->SetTextColor(176, 54, 72);
         $this->Cell(15, 5, str_pad($ticket->id, 4, "0", STR_PAD_LEFT), 0, 0, 'R');
+        $this->SetTextColor(37, 36, 64);
 
         //TS y su recuadro
         $this->setXY((10 + $espejo), 14 + $nivel);
@@ -70,13 +73,8 @@ class Boleta extends Fpdf
         $this->Cell(10, 5, 'Valor Q. ' . $ticket->cost);
 
         //Imagen de expo
-        // Load an image into a variable
-        //$logo = file_get_contents('{{ public_path("img/logo_round_2.png") }}');
-        // Output it
-        //$this->MemImage($logo, 25, 25);
-        $url = asset('img/logo_round_2.png');
         //$this->Image($url, (18 + $espejo), 65 + $nivel, 250, 205);
-        $this->Image($ticket->logo, (37 + $espejo), 12 + $nivel, 25, 25, 'JPG', 'http://www.desarrolloweb.com');
-        //dump($ticket);
+        //$this->Image($ticket->logo, (37 + $espejo), 12 + $nivel, 25, 25, 'JPG', 'http://www.desarrolloweb.com');
+
     }
 }//fin clase PDF

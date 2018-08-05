@@ -90,6 +90,7 @@ class CardsController extends Controller
         $pdf->SetAutoPageBreak(false, 0.5);
         $pdf->AddPage('P', 'Letter'); //Vertical, Carta
         $pdf->SetFont('Times', 'B', 12); //Arial, negrita, 12 puntos
+        $pdf->SetTextColor(37, 36, 64);
 
         $ticket->cost = '10.00';
         $ticket->date = $fecha->format('d/m/Y');
