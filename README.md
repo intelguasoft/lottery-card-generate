@@ -40,4 +40,7 @@ Output: Laravel development server started: <http://127.0.0.1:8000>
  * Creamos un usuario de la aplicación.
  * Con el usuario creado nos logueamos.
  * Una vez dentro de la aplicación podemos generar el listado de boletas accediendo al menú "Cuadernillos de boletas".
- * Ya dentro de esta sección podemos dar click en el boton "Generar", el cual pasados unos segundos nos mostrara el cuadernillo generado en formato PDF.
+ * Ya dentro de esta sección podemos dar click en el botón "Generar", el cual pasados unos segundos nos mostrara el cuadernillo generado en formato PDF.
+
+Bueno, llegados a este punto creo que es suficiente como para que por intuición propia actuemos.
+Hora: 22:20 - Yo codeando, ustedes durmiendo.
