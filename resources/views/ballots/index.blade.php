@@ -1,10 +1,10 @@
-@extends('adminlte::page') 
-@section('title', 'Dashboard') 
+@extends('adminlte::page')
+@section('title', 'Dashboard')
 @section('content_header')
 <h1>Cuadernillos</h1>
 
 
-@stop 
+@stop
 @section('content')
 <div class="row">
     <div class="col-xs-12">
@@ -12,6 +12,7 @@
             <div class="box-header">
                 <h3 class="box-title">Generados</h3>
 
+                <a href="{{ url('admin/boletas') }}" class="btn btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"> </i>  Generar</a>
                 <div class="box-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
@@ -62,10 +63,10 @@
 
 
 
-@stop 
+@stop
 @section('css')
-<link rel="stylesheet" href="/css/admin_custom.css"> 
-@stop 
+<link rel="stylesheet" href="/css/admin_custom.css">
+@stop
 @section('js')
 <script>
     console.log('Hi!');

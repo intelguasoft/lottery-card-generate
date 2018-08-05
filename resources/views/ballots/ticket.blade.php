@@ -40,23 +40,6 @@
     <div class="container-fluid">
         <div class="row">
             @foreach ($collectionBallots as $ballots)
-            <div class="col-xs-3">
-                <span class="titulo">Lottery Freddy </span>
-                <span class="label label-info pull-right identificador">
-                        N&#186;&#32;
-                        <span class="text-danger">
-                            {{ str_pad($loop->iteration, 4, "0", STR_PAD_LEFT) }}
-                        </span>
-                </span>
-
-                <div class="row">
-                    @foreach($ballots as $ticket)
-                    <div class="col-xs-4">
-                        <div class="list-group-item number">{{ $ticket }}</div>
-                    </div>
-                    @endforeach
-                </div>
-            </div> {{-- {{-- Otro modo @foreach ($collectionBallots as $ballots)
             <div class="col-xs-4">
                 <!-- Widget: user widget style 1 -->
                 <div class="box box-widget widget-user-2">
@@ -86,7 +69,8 @@
                 </div>
                 <!-- /.widget-user -->
             </div>
-            <!-- /.col -->--}} @endforeach
+            <!-- /.col -->
+            @endforeach
         </div>
     </div>
 

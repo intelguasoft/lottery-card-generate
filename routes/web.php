@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 
-Route::get("admin/ballots", "CardsController@getBallots")->middleware('auth');
+Route::get("admin/ballots1", "CardsController@getBallots")->middleware('auth');
 Route::get("admin/ballots", "CardsController@index")->middleware('auth');
 Route::get("admin/recta", "CardsController@rectangulos")->middleware('auth');
+Route::get("admin/boletas", "CardsController@boletas")->middleware('auth');

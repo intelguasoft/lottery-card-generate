@@ -5,7 +5,7 @@
  * personalizada por medio de argumentos.
  *
  * @package    IntelGUA
- * @subpackage Library
+ * @subpackage Generators
  * @author     Henry Díaz <hnrdiaz@gmail.com>
  */
 
@@ -14,23 +14,9 @@ namespace IntelGUA\Library;
 class Generate
 {
 
-    private $currentNumber = "";
+    protected $currentNumber = "";
 
-    private $listNumbers = [];
-
-    private $length = 0;
-
-    private $quantity = 0;
-
-    private $isUnique = false;
-
-    public function __construct($_length = 2, $_quantity = 100, $_isUnique = true)
-    {
-        $this->length = $_length;
-        $this->quantity = $_quantity;
-        $this->isUnique = $_isUnique;
-    }
-
+    protected $listNumbers = [];
     /**
      * Permite obtener una determinada cantidad de números aleatorios
      * indicada en el argumento $quantity, ya sea que los números sean
@@ -43,55 +29,30 @@ class Generate
      * @param boolean $unique
      * @return array
      */
-    public function getNumbersGenerated()
+    public function getNumbersGenerated($quantity = 10, $unique = true, $length = 4)
     {
-        switch ($length) {
-            case (($this->length >= 1) && ($this->length <= 1)):
-                throw new Exception("Solo se pueden generar 10 números con una longitud de $this->length dígito.");
-                break;
-            case (($this->length >= 2) && ($this->length <= 2)):
-                throw new Exception("Solo se pueden generar 100 números con una longitud de $this->length dígitos.");
-                break;
-            case (($this->length >= 3) && ($this->length <= 3)):
-                throw new Exception("Solo se pueden generar 1000 números con una longitud de $this->length dígitos.");
-                break;
-            case (($this->length >= 4) && ($this->length <= 4)):
-                throw new Exception("Solo se pueden generar 10000 números con una longitud de $this->length dígitos.");
-                break;
-            case (($this->length >= 5) && ($this->length <= 5)):
-                throw new Exception("Solo se pueden generar 100000 números con una longitud de $this->length dígitos.");
-                break;
-            case (($this->length >= 6) && ($this->length <= 6)):
-                throw new Exception("Solo se pueden generar 1000000 números con una longitud de $this->length dígitos.");
-                break;
-            case (($this->length >= 7) && ($this->length <= 7)):
-                throw new Exception("Solo se pueden generar 10000000 números con una longitud de $this->length dígitos.");
-                break;
-            default:
-                throw new Exception("La longitud de '$this->length' caracteres no esta permitida.");
-                break;
-        }
+        //dd($this->generateNumber(2));
 
-        return $this->listNumbers;
-    }
+        /* $this->currentNumber = $this->generateNumber($length);
+        for ($i=1; $i <= $quantity; $i++) {
+            if (in_array((string)$this->currentNumber, $this->listNumbers)) {
+                $this->currentNumber = $this->generateNumber($length);
+            }
+        } */
 
-    public function generateNumbers()
-    {
+        $this->listNumbers[] = $this->generateNumber($length);
 
-        while (count($this->listNumbers) <= ($this->quantity - 1)) {
-            $this->currentNumber = $this->generateNumber($this->length);
-            if ($this->unique == true) {
-                if (in_array((string)$this->currentNumber, $this->listNumbers)) {
-                    continue;
-                } else {
-                    $this->listNumbers[] = $this->currentNumber;
-                }
+        while (count($this->listNumbers) <= ($quantity - 1)) {
+            $this->currentNumber = $this->generateNumber($length);
+            if (in_array((string)$this->currentNumber, $this->listNumbers)) {
+                continue;
             } else {
                 $this->listNumbers[] = $this->currentNumber;
             }
-        }
 
-        dd($this->listNumbers);
+        }
+        return $this->listNumbers;
+
     }
 
     /**
@@ -103,7 +64,7 @@ class Generate
      * @param int $length
      * @return string
      */
-    public function generateNumber($length)
+    public function generateNumber($length = 4)
     {
 
         $chars = '1234567890';
