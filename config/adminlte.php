@@ -111,7 +111,7 @@ return [
         'Boletas',
         [
             'text' => 'Cuadernillos de boletas',
-            'url' => 'admin/ballots',
+            'url' => 'admin/boletas',
             'icon' => 'ticket',
             'icon_color' => 'green',
         ],

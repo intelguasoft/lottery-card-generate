@@ -85,4 +85,22 @@ class Generate
         /** Devolvemos la cantidad formada como cadena */
     }
 
+    public function getFourDigits()
+    {
+        $numbers = array();
+
+        // Loop while there aren't enough numbers
+        while (count($numbers) < 8000) {
+
+            $random_number = rand(1, 9999);
+
+            if (!in_array($random_number, $numbers)) {
+                // This adds the number to the array
+                $numbers[] = $random_number;
+            }
+
+        }
+        return $numbers;
+    }
+
 }

@@ -1,7 +1,11 @@
 @extends('adminlte::page')
 @section('title', 'Dashboard')
 @section('content_header')
-<h1>Cuadernillos</h1>
+<h1>Cuadernillos generados</h1>
+
+
+
+
 
 
 @stop
@@ -10,18 +14,35 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Generados</h3>
-
-                <a href="{{ url('admin/boletas') }}" class="btn btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"> </i>  Generar</a>
-                <div class="box-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                        <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                <form method="POST" action="/admin/boletas">
+                    {{ csrf_field() }}
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Digitos por boletas:</label>
+                            <select class="form-control select2" name="digitos" style="width: 100%;">
+                                <option value="4" selected="selected">4 Digitos</option>
+                                <option value="5" >5 Digitos</option>>
+                            </select>
                         </div>
+                        <!-- /.form-group -->
                     </div>
-                </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Fecha:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" name="fecha" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <input type="submit" class="btn btn-success" value="Generar boletas">
+                    </div>
+                </form>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive no-padding">
@@ -63,6 +84,10 @@
 
 
 
+
+
+
+
 @stop
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
@@ -72,6 +97,10 @@
     console.log('Hi!');
 
 </script>
+
+
+
+
 
 
 

@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Codedge\Fpdf\FpdfServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -209,7 +210,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'FPDF' => Codedge\Fpdf\Facades\Fpdf::class,
-
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
     ],
 
 ];

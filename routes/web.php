@@ -1,5 +1,6 @@
 <?php
 use IntelGUA\Library\Generate;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,6 @@ Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('admin');
 
 Route::get("admin/ballots1", "CardsController@getBallots")->middleware('auth');
-Route::get("admin/ballots", "CardsController@index")->middleware('auth');
+Route::get("admin/boletas", "CardsController@index")->middleware('auth');
 Route::get("admin/recta", "CardsController@rectangulos")->middleware('auth');
-Route::get("admin/boletas", "CardsController@boletas")->middleware('auth');
+Route::post("admin/boletas", "CardsController@boletas")->middleware('auth');
