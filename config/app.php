@@ -152,6 +152,7 @@ return [
          */
         Codedge\Fpdf\FpdfServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
         /*
          * Application Service Providers...
          */

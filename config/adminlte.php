@@ -153,6 +153,12 @@ return [
             'icon' => 'question-circle',
             'icon_color' => 'aqua',
         ],
+        [
+            'text' => 'Logs',
+            'url' => 'admin/log-viewer',
+            'icon' => 'bug',
+            'icon_color' => 'red',
+        ],
     ],
 
     /*
